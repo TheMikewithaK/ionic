@@ -1,0 +1,41 @@
+import { Address } from 'cluster';
+
+export interface EventResponse {
+    event: EmergenyEvent;
+    links: Links;
+}
+
+export interface EmergenyEvent {
+    id: number;
+    ccreated: Date;
+    caller: Caller;
+    dialed: string;
+}
+
+export interface Caller {
+    id: string;
+    firstName: string;
+    lastName: string;
+    phone: string;
+    address: Address;
+}
+
+export interface Address {
+    street1: string;
+    street2: string;
+    city: string;
+    state: string;
+    zip: string;
+}
+
+export interface Acknowledgement {
+    timestamp: Date;
+    user: string;
+    note: string;
+}
+
+export interface Links {
+    self: string;
+    next: string;
+    acknowledgements: string;
+}
