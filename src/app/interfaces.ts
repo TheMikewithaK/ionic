@@ -1,5 +1,3 @@
-import { Address } from 'cluster';
-
 export interface EventResponse {
     event: EmergenyEvent;
     links: Links;
@@ -7,7 +5,7 @@ export interface EventResponse {
 
 export interface EmergenyEvent {
     id: number;
-    ccreated: Date;
+    created: Date;
     caller: Caller;
     dialed: string;
 }
